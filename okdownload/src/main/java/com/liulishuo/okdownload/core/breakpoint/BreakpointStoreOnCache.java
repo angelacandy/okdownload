@@ -158,9 +158,10 @@ public class BreakpointStoreOnCache implements DownloadStore {
     }
 
     @Override public synchronized void remove(int id) {
-        storedInfos.remove(id);
-        if (unStoredTasks.get(id) == null) sortedOccupiedIds.remove(Integer.valueOf(id));
-        keyToIdMap.remove(id);
+        //适配自己项目，不复用ID
+//        storedInfos.remove(id);
+//        if (unStoredTasks.get(id) == null) sortedOccupiedIds.remove(Integer.valueOf(id));
+//        keyToIdMap.remove(id);
     }
 
     @Override
